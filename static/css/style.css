@@ -3,13 +3,20 @@ nav.menu {
   display: flex;
   justify-content: space-between;
 }
+nav.menu > ul:last-child ul.submenu {
+  right: 0;
+}
 nav.menu > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 nav.menu > ul li {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 nav.menu > ul li ul.submenu {
   background-color: gray;
@@ -45,4 +52,109 @@ nav.menu a:not(:has(img)) {
 nav.menu a:not(:has(img)):hover {
   background-color: white;
   color: red;
+}
+
+aside.menu-offcanvas {
+  background-color: black;
+  color: white;
+  width: 10rem;
+  padding: 1rem;
+  margin: 0;
+  position: fixed;
+  top: 100vh;
+  bottom: 0;
+  left: -12rem;
+  transition: all 0.5s;
+}
+aside.menu-offcanvas span {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  display: block;
+  font-size: 18px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border: solid 1px black;
+  border-radius: 50%;
+}
+aside.menu-offcanvas.on {
+  left: 0;
+  top: 0;
+}
+aside.menu-offcanvas.on span {
+  top: 25px;
+  right: 25px;
+  color: white;
+  border-color: white;
+}
+aside.menu-offcanvas > h3 {
+  margin: 2rem 0 0 0;
+  padding: 0.3rem 1rem;
+  color: gray;
+}
+aside.menu-offcanvas section:has(li:hover) h3 {
+  color: white;
+  text-shadow: 0 0 3px white;
+}
+aside.menu-offcanvas ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+aside.menu-offcanvas ul li {
+  margin: 0;
+  padding: 0.3rem 1rem;
+}
+aside.menu-offcanvas ul li:hover {
+  text-shadow: 0 0 5px white;
+}
+
+div:has(div.modal) {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(204, 204, 204, 0.5333333333);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: none;
+}
+div:has(div.modal):has(div.modal.show) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div:has(div.modal) div.modal {
+  width: 25rem;
+  padding: 0;
+  border-radius: 2px;
+  background-color: bisque;
+  box-shadow: 0 0 3px black;
+  opacity: 0;
+  transition: all 5s;
+}
+div:has(div.modal) div.modal.show {
+  opacity: 1;
+}
+div:has(div.modal) div.modal header {
+  padding: 1rem;
+  border-bottom: solid 1px black;
+  text-align: center;
+}
+div:has(div.modal) div.modal main {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div:has(div.modal) div.modal footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

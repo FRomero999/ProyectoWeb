@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,12 @@
 
 <body>
     <header>
-        <nav class="menu"> 
+        <nav class="menu">
             <ul>
                 <li>
                     <a href="#">
                         <img src="https://via.placeholder.com/120x40">
-                    </a>                   
+                    </a>
                 </li>
                 <li>
                     <a href="#">OpcionMenu1</a>
@@ -34,7 +35,7 @@
                         <li><a href="#">OpcionSubmenu2</a></li>
                         <li><a href="#">OpcionSubmenu3</a></li>
                         <li><a href="#">OpcionSubmenu4</a></li>
-                    </ul>                    
+                    </ul>
                 </li>
                 <li>
                     <a href="#">OpcionMenu3</a>
@@ -43,16 +44,46 @@
 
             <ul>
                 <li>
-                    <a href="#">OpcionMenu4</a>
+                    <a href="#">Usuario</a>
                     <ul class="submenu">
-                        <li><a href="#">OpcionSubmenu1</a></li>
-                        <li><a href="#">OpcionSubmenu2</a></li>
-                    </ul>                    
+                        <li><a href="#" onclick="openModal('#login')">Login</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
     </header>
-    
+
+    <aside class="menu-offcanvas">
+        <span>
+            	&#8801;
+        </span>
+        <section>
+            <h3>Sección 1</h3>
+            <ul>
+                <li>Opcion 1</li>
+                <li>Opcion 2</li>
+                <li>Opcion 3</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sección 2</h3>
+            <ul>
+                <li>Opcion 1</li>
+                <li>Opcion 2</li>
+                <li>Opcion 3</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sección 2</h3>
+            <ul>
+                <li>Opcion 1</li>
+                <li>Opcion 2</li>
+                <li>Opcion 3</li>
+            </ul>
+        </section>
+    </aside>
+
     <main>
 
         <section></section>
@@ -62,10 +93,22 @@
         <section></section>
 
     </main>
-    
+
     <footer>
 
-    </footer>  
+    </footer>
+
+
+    <div>
+        <div id="login" class="modal">
+            <header>Inicio de Sesión</header>
+            <main> ... </main>
+            <footer> <button class="aceptar" onclick="openModal('#login')">Aceptar</button> </footer>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js" ></script>
+
 </body>
 
 </html>
