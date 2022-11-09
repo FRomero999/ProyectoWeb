@@ -168,10 +168,14 @@ div:has(div.modal){
     right:0;
     background-color: #cccccc88;
     backdrop-filter:blur(3px);
-    display:none;
+    opacity:0;
+    z-index:-1;
+    @include flexcenter();
+    transition: all 0.4s;
 
     &:has(div.modal.show){
-        @include flexcenter();
+        opacity: 1;
+        z-index: 1;
     }
 
     div.modal{
@@ -180,12 +184,6 @@ div:has(div.modal){
         border-radius:2px;
         background-color:bisque;
         box-shadow: 0 0 3px black;
-        opacity:0;
-        transition: all 5s;
-
-        &.show{
-            opacity: 1;
-        }
 
         header{
             padding:1rem;

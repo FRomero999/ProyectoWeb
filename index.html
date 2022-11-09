@@ -44,9 +44,9 @@
 
             <ul>
                 <li>
-                    <a href="#">Usuario</a>
+                    <a href="#" class="menu_usuario">Usuario</a>
                     <ul class="submenu">
-                        <li><a href="#" onclick="openModal('#login')">Login</a></li>
+                        <li><a href="#" data-dialog="#login">Login</a></li>
                         <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
@@ -102,8 +102,10 @@
     <div>
         <div id="login" class="modal">
             <header>Inicio de Sesión</header>
-            <main> ... </main>
-            <footer> <button class="aceptar" onclick="openModal('#login')">Aceptar</button> </footer>
+            <main> 
+                <input name="nombre"/>
+            </main>
+            <footer> <button data-dialog="#login" class="aceptar">Aceptar</button> </footer>
         </div>
     </div>
 
