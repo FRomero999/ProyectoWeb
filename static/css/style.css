@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+--body {
+  background-image: url(/static/img/fondo.jpg);
+  background-attachment: fixed;
+}
+
+main {
+  position: relative;
+}
+
 nav.menu {
   background-color: black;
   display: flex;
@@ -128,6 +141,7 @@ div:has(div.modal) {
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+  padding: 0;
 }
 div:has(div.modal):has(div.modal.show) {
   opacity: 1;
@@ -156,4 +170,58 @@ div:has(div.modal) div.modal footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+section#hero {
+  height: calc(100vh - 5rem);
+}
+section#hero div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3725490196);
+  width: 100vw;
+  height: calc(100vh - 5rem);
+  padding: 0;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+section#hero div.fondo {
+  background-image: url(/static/img/fondo.jpg);
+  --background: rgb(36,0,3);
+  --background: linear-gradient(66deg, rgba(36,0,3,1) 0%, rgba(187,65,65,1) 67%);
+  z-index: -9;
+}
+section#hero * {
+  margin: 0;
+}
+section#hero h1, section#hero p, section#hero a {
+  color: white;
+  text-shadow: 0 0 3px black;
+  padding: 0.5rem;
+}
+section#hero h1 {
+  font-size: 4rem;
+}
+section#hero p {
+  font-size: 2rem;
+}
+section#hero a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  border: solid 2px white;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(252, 70, 107, 0.0419876569) 100%) radial-gradient(circle, rgb(238, 174, 202) 16%, rgb(148, 187, 233) 22%);
+  transition: all 0.3s;
+}
+section#hero a:hover {
+  color: black;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgb(238, 174, 202) 16%, rgb(148, 187, 233) 44%);
 }/*# sourceMappingURL=style.css.map */
