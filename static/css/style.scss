@@ -6,6 +6,19 @@ $color_text_active_menu:red;
 //    outline:solid 1px red;
 //}
 
+*{
+    box-sizing: border-box;
+}
+
+--body{
+    background-image: url(/static/img/fondo.jpg);
+    background-attachment: fixed;
+}
+
+main{
+    position:relative;
+}
+
 @mixin flexcenter {
     display:flex;
     justify-content: center;
@@ -172,6 +185,7 @@ div:has(div.modal){
     z-index:-1;
     @include flexcenter();
     transition: all 0.4s;
+    padding:0;
 
     &:has(div.modal.show){
         opacity: 1;
@@ -202,4 +216,68 @@ div:has(div.modal){
             @include flexcenter();
         }
     }
+}
+
+section#hero{
+    height:calc(100vh - 5rem);
+
+    div{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        background-color: #0000005f;       
+        width:100vw;
+        height:calc(100vh - 5rem);
+        padding:0;
+        backdrop-filter: blur(3px);
+    }
+
+    div.fondo{
+        background-image: url(/static/img/fondo.jpg);
+        --background: rgb(36,0,3);
+        --background: linear-gradient(66deg, rgba(36,0,3,1) 0%, rgba(187,65,65,1) 67%);
+        z-index:-9;
+    }
+
+    *{
+        margin:0;
+    }
+
+    h1, p ,a{
+        color:white;
+        text-shadow:0 0 3px black;
+        padding:0.5rem;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    p{
+        font-size:2rem;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 1.6rem;
+        border: solid 2px white;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,0.04198765687915795) 100%)
+                    radial-gradient(circle, rgba(238,174,202,1) 16%, rgba(148,187,233,1) 22%);
+        
+        transition:all 0.3s;
+        &:hover{
+            color:black;
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 16%, rgba(148,187,233,1) 44%);
+                        
+        }
+    }
+
 }
