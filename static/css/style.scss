@@ -10,9 +10,10 @@ $color_text_active_menu:red;
     box-sizing: border-box;
 }
 
---body{
-    background-image: url(/static/img/fondo.jpg);
-    background-attachment: fixed;
+html{
+    // con esto hacemos el scroll suave en
+    // todos los enlaces internos        
+    scroll-behavior: smooth;
 }
 
 main{
@@ -29,6 +30,10 @@ nav.menu{
     background-color: $color_fondo_menu;
     display:flex;
     justify-content: space-between;
+    align-items: stretch;
+    z-index: 99;
+    padding:0;
+    margin:0;
 
     >ul:last-child ul.submenu{
         right:0;
@@ -39,7 +44,7 @@ nav.menu{
         flex-direction: row;
         align-items: center;
         margin:0;
-        padding:0;
+        z-index:1;
 
         li{
             list-style: none;
@@ -48,13 +53,18 @@ nav.menu{
             
             ul.submenu{
                 background-color:gray;
-                padding:0;
                 position:absolute;
                 display:none;
+                padding:0;
+                margin:0;
         
                 li{
                     list-style:none;
                     margin:0;
+
+                    a{
+                        padding:1rem;
+                    }
                 }
             }
 
@@ -112,11 +122,12 @@ aside.menu-offcanvas{
     bottom:0;
     left:-12rem;
     transition:all 0.5s;
+    z-index: 9;
 
-    span{
+    button{
         position:absolute;
-        top:-25px;
-        right:-25px;
+        top:-2rem;
+        right:-4rem;
         display:block;
         font-size:18px;
         height:20px;
@@ -134,7 +145,7 @@ aside.menu-offcanvas{
         left:0;
         top:0;
 
-        span{
+        button{
             top:25px;
             right:25px;
             color: white;
@@ -218,6 +229,9 @@ div:has(div.modal){
     }
 }
 
+// Hero
+
+
 section#hero{
     height:calc(100vh - 5rem);
 
@@ -232,17 +246,21 @@ section#hero{
         align-items: center;
         flex-direction: column; 
         background-color: #0000005f;       
-        width:100vw;
         height:calc(100vh - 5rem);
         padding:0;
         backdrop-filter: blur(3px);
     }
 
     div.fondo{
-        background-image: url(/static/img/fondo.jpg);
-        --background: rgb(36,0,3);
-        --background: linear-gradient(66deg, rgba(36,0,3,1) 0%, rgba(187,65,65,1) 67%);
-        z-index:-9;
+        background-image: url("../img/fantasy.jpg");
+        z-index:-1;
+
+        video{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
     }
 
     *{
@@ -251,32 +269,77 @@ section#hero{
 
     h1, p ,a{
         color:white;
-        text-shadow:0 0 3px black;
         padding:0.5rem;
     }
 
     h1{
         font-size: 4rem;
+        text-shadow:0 0 3px black;
+
     }
 
     p{
         font-size:2rem;
+        text-shadow:0 0 3px black;
     }
 
     a{
         text-decoration: none;
         font-size: 1.6rem;
         border: solid 2px white;
-        background: rgb(238,174,202);
-        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,0.04198765687915795) 100%)
-                    radial-gradient(circle, rgba(238,174,202,1) 16%, rgba(148,187,233,1) 22%);
+  
+        background-color: #8BC6EC;
+        background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 98%);
         
-        transition:all 0.3s;
+        transition:background-image 0.3s;
         &:hover{
-            color:black;
-            background: rgb(238,174,202);
-            background: radial-gradient(circle, rgba(238,174,202,1) 16%, rgba(148,187,233,1) 44%);
-                        
+            color:white;
+            background-color: #9599E2;
+            background-image: linear-gradient(135deg, #9599E2 0%, #8BC6EC 98%);
+                            
+        }
+    }
+
+}
+
+// Galeria
+
+section#galeria{
+
+    text-align:center;
+    padding: min(3rem, 30px);
+    min-height: 100vh;
+
+    div{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        figure{
+            width:300px;
+            max-width:300px;
+            transition: all 0.3s;
+            padding:20px;
+
+            picture img{
+                max-width:100%;
+                height:200px;
+                object-fit: cover;
+            }
+
+            &:hover{
+                background-color: lightblue;
+                padding:0;
+            }
+            &:nth-child(2n-1):hover{
+                transform:rotate(-5deg);
+            }
+            &:nth-child(2n):hover{
+                transform:rotate(3deg);
+            }                        
+
+
         }
     }
 

@@ -20,9 +20,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">OpcionMenu1</a>
+                    <a href="#">Contenido</a>
                     <ul class="submenu">
-                        <li><a href="#">OpcionSubmenu1</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
                         <li><a href="#">OpcionSubmenu2</a></li>
                         <li><a href="#">OpcionSubmenu3</a></li>
                         <li><a href="#">OpcionSubmenu4</a></li>
@@ -55,9 +55,9 @@
     </header>
 
     <aside class="menu-offcanvas">
-        <span>
-            	&#8801;
-        </span>
+        <button>
+            &#8801;
+        </button>
         <section>
             <h3>Sección 1</h3>
             <ul>
@@ -87,7 +87,9 @@
     <main>
 
         <section id="hero">
-            <div class="fondo"></div>
+            <div class="fondo">
+                <video src="static/img/seul.mp4" loop muted autoplay></video>
+            </div>
             <div>
                 <h1>Título de página</h1>
                 <p>Subtitulo con algo de descripción larga</p>
@@ -95,11 +97,67 @@
             </div>
         </section>
 
-        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum accusantium quos doloribus ullam <quam class="lorem"></quam></section>
-        <section></section>
-        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum accusantium quos doloribus ullam <quam class="lorem"></quam></section>
-        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum accusantium quos doloribus ullam <quam class="lorem"></quam></section>
-        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum accusantium quos doloribus ullam <quam class="lorem"></quam></section>
+        <section id="galeria">
+            <h2>Galeria de imágenes</h2>
+            <div>
+                <figure>
+                    <picture>
+                        <source srcset="static/img/fantasy.jpg" media="(min-width: 1200px)">
+                        <source srcset="static/img/fondo.jpg" media="(min-width: 800px)">
+                        <img src="static/img/fantasy.jpg" alt="">
+                    </picture>
+                    <figcaption>Descripción</figcaption>
+                </figure>
+                <figure>
+                    <picture>
+                        <source srcset="static/img/fantasy.jpg" media="(min-width: 800px)">
+                        <img src="static/img/fondo.jpg" alt="">
+                    </picture>
+                    <figcaption>Descripción</figcaption>
+                </figure>
+                <figure>
+                    <picture>
+                        <source srcset="static/img/fantasy.jpg" media="(min-width: 800px)">
+                        <img src="static/img/fondo.jpg" alt="">
+                    </picture>
+                    <figcaption>Descripción</figcaption>
+                </figure>
+                <figure>
+                    <picture>
+                        <source srcset="static/img/fantasy.jpg" media="(min-width: 800px)">
+                        <img src="static/img/fondo.jpg" alt="">
+                    </picture>
+                    <figcaption>Descripción</figcaption>
+                </figure>                                
+            </div>
+
+        </section>
+
+
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum
+            autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam
+            libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam
+            molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum
+            accusantium quos doloribus ullam <quam class="lorem"></quam>
+        </section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum
+            autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam
+            libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam
+            molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum
+            accusantium quos doloribus ullam <quam class="lorem"></quam>
+        </section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum
+            autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam
+            libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam
+            molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum
+            accusantium quos doloribus ullam <quam class="lorem"></quam>
+        </section>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptates expedita ducimus nostrum
+            autem eos perferendis eius possimus amet laboriosam, ea praesentium earum voluptate reiciendis dicta ullam
+            libero modi corporis?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium vero veniam
+            molestiae et obcaecati totam ducimus repudiandae quia. Consequuntur, beatae dicta iusto perspiciatis harum
+            accusantium quos doloribus ullam <quam class="lorem"></quam>
+        </section>
         <section></section>
         <section></section>
 
@@ -113,14 +171,14 @@
     <div>
         <div id="login" class="modal">
             <header>Inicio de Sesión</header>
-            <main> 
-                <input name="nombre"/>
+            <main>
+                <input name="nombre" />
             </main>
             <footer> <button data-dialog="#login" class="aceptar">Aceptar</button> </footer>
         </div>
     </div>
 
-    <script src="/static/js/app.js" ></script>
+    <script src="static/js/app.js"></script>
 
 </body>
 

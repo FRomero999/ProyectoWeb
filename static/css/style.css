@@ -2,9 +2,8 @@
   box-sizing: border-box;
 }
 
---body {
-  background-image: url(/static/img/fondo.jpg);
-  background-attachment: fixed;
+html {
+  scroll-behavior: smooth;
 }
 
 main {
@@ -15,6 +14,10 @@ nav.menu {
   background-color: black;
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  z-index: 99;
+  padding: 0;
+  margin: 0;
 }
 nav.menu > ul:last-child ul.submenu {
   right: 0;
@@ -24,7 +27,7 @@ nav.menu > ul {
   flex-direction: row;
   align-items: center;
   margin: 0;
-  padding: 0;
+  z-index: 1;
 }
 nav.menu > ul li {
   list-style: none;
@@ -33,13 +36,17 @@ nav.menu > ul li {
 }
 nav.menu > ul li ul.submenu {
   background-color: gray;
-  padding: 0;
   position: absolute;
   display: none;
+  padding: 0;
+  margin: 0;
 }
 nav.menu > ul li ul.submenu li {
   list-style: none;
   margin: 0;
+}
+nav.menu > ul li ul.submenu li a {
+  padding: 1rem;
 }
 nav.menu > ul li:hover ul.submenu {
   display: block;
@@ -78,11 +85,12 @@ aside.menu-offcanvas {
   bottom: 0;
   left: -12rem;
   transition: all 0.5s;
+  z-index: 9;
 }
-aside.menu-offcanvas span {
+aside.menu-offcanvas button {
   position: absolute;
-  top: -25px;
-  right: -25px;
+  top: -2rem;
+  right: -4rem;
   display: block;
   font-size: 18px;
   height: 20px;
@@ -98,7 +106,7 @@ aside.menu-offcanvas.on {
   left: 0;
   top: 0;
 }
-aside.menu-offcanvas.on span {
+aside.menu-offcanvas.on button {
   top: 25px;
   right: 25px;
   color: white;
@@ -186,42 +194,82 @@ section#hero div {
   align-items: center;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.3725490196);
-  width: 100vw;
   height: calc(100vh - 5rem);
   padding: 0;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
 }
 section#hero div.fondo {
-  background-image: url(/static/img/fondo.jpg);
-  --background: rgb(36,0,3);
-  --background: linear-gradient(66deg, rgba(36,0,3,1) 0%, rgba(187,65,65,1) 67%);
-  z-index: -9;
+  background-image: url("../img/fantasy.jpg");
+  z-index: -1;
+}
+section#hero div.fondo video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 section#hero * {
   margin: 0;
 }
 section#hero h1, section#hero p, section#hero a {
   color: white;
-  text-shadow: 0 0 3px black;
   padding: 0.5rem;
 }
 section#hero h1 {
   font-size: 4rem;
+  text-shadow: 0 0 3px black;
 }
 section#hero p {
   font-size: 2rem;
+  text-shadow: 0 0 3px black;
 }
 section#hero a {
   text-decoration: none;
   font-size: 1.6rem;
   border: solid 2px white;
-  background: rgb(238, 174, 202);
-  background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgba(252, 70, 107, 0.0419876569) 100%) radial-gradient(circle, rgb(238, 174, 202) 16%, rgb(148, 187, 233) 22%);
-  transition: all 0.3s;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 98%);
+  transition: background-image 0.3s;
 }
 section#hero a:hover {
-  color: black;
-  background: rgb(238, 174, 202);
-  background: radial-gradient(circle, rgb(238, 174, 202) 16%, rgb(148, 187, 233) 44%);
+  color: white;
+  background-color: #9599E2;
+  background-image: linear-gradient(135deg, #9599E2 0%, #8BC6EC 98%);
+}
+
+section#galeria {
+  text-align: center;
+  padding: min(3rem, 30px);
+  min-height: 100vh;
+}
+section#galeria div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section#galeria div figure {
+  width: 300px;
+  max-width: 300px;
+  transition: all 0.3s;
+  padding: 20px;
+}
+section#galeria div figure picture img {
+  max-width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#galeria div figure:hover {
+  background-color: lightblue;
+  padding: 0;
+}
+section#galeria div figure:nth-child(2n-1):hover {
+  transform: rotate(-5deg);
+}
+section#galeria div figure:nth-child(2n):hover {
+  transform: rotate(3deg);
 }/*# sourceMappingURL=style.css.map */

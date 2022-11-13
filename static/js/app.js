@@ -1,5 +1,5 @@
 
-document.querySelector("aside.menu-offcanvas span").addEventListener(
+document.querySelector("aside.menu-offcanvas button").addEventListener(
     "click", function(){
         document.querySelector("aside.menu-offcanvas").classList.toggle("on")
     }
