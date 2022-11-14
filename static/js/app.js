@@ -23,4 +23,8 @@ el.addEventListener("click",function(){
     document.querySelector("a.menu_usuario").innerText = nombre
 })
 
+function pararVideo(){
+    document.querySelector("video").playbackRate = 3
+}
+
 

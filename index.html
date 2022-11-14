@@ -88,12 +88,14 @@
 
         <section id="hero">
             <div class="fondo">
-                <video src="static/img/seul.mp4" loop muted autoplay></video>
+                <video autoplay loop muted controls poster="">
+                    <source src="static/img/seul.mp4" >                   
+                </video>
             </div>
             <div>
                 <h1>Título de página</h1>
                 <p>Subtitulo con algo de descripción larga</p>
-                <a href="#">Enlace de acción principal</a>
+                <a href="#" onclick="pararVideo()">Enlace de acción principal</a>
             </div>
         </section>
 
