@@ -214,7 +214,9 @@ section#hero div.fondo video {
 section#hero * {
   margin: 0;
 }
-section#hero h1, section#hero p, section#hero a {
+section#hero h1,
+section#hero p,
+section#hero a {
   color: white;
   padding: 0.5rem;
 }
@@ -272,4 +274,35 @@ section#galeria div figure:nth-child(2n-1):hover {
 }
 section#galeria div figure:nth-child(2n):hover {
   transform: rotate(3deg);
+}
+
+section:not([id]) {
+  padding: 2rem 10rem;
+  font-size: clamp(14px, 2vw, 32px);
+  text-align: center;
+}
+
+section#peliculas {
+  text-align: center;
+  min-height: 100vh;
+}
+section#peliculas div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section#peliculas div div.pelicula {
+  border: solid;
+  margin: 1rem;
+  width: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section#peliculas div div.pelicula img {
+  height: 200px;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
