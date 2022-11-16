@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300&display=swap");
+body,
+p,
+a,
+button {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fredoka One", cursive;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -255,7 +270,7 @@ section#galeria div {
 }
 section#galeria div figure {
   width: 300px;
-  max-width: 400px;
+  max-width: 300px;
   transition: all 0.3s;
   padding: 20px;
 }
@@ -276,7 +291,7 @@ section#galeria div figure:nth-child(2n):hover {
   transform: rotate(3deg);
 }
 
-section:not([id]) {
+main section:not([id]) {
   padding: 2rem 10rem;
   font-size: clamp(14px, 2vw, 32px);
   text-align: center;
@@ -296,13 +311,31 @@ section#peliculas div div.pelicula {
   border: solid;
   margin: 1rem;
   width: 300px;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "img titulo" "img autor" "img desc";
+}
+section#peliculas div div.pelicula * {
+  margin: 0;
+  padding: 0;
 }
 section#peliculas div div.pelicula img {
-  height: 200px;
+  height: 100%;
   width: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  grid-area: img;
+}
+section#peliculas div div.pelicula h4 {
+  grid-area: titulo;
+}
+section#peliculas div div.pelicula p.autor {
+  grid-area: autor;
+}
+section#peliculas div div.pelicula p.desc {
+  grid-area: desc;
+  font-size: 0.7rem;
 }/*# sourceMappingURL=style.css.map */
